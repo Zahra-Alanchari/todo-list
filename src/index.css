@@ -29,7 +29,7 @@
   background-color: transparent;
 }
 .main-box {
-  background-color: red;
+  /* background-color: red; */
   width: 500px;
   height: 600px;
   position: absolute;
@@ -45,7 +45,6 @@
   transform: translatex(-100%);
 }
 .main-header {
-  /* overflow: hidden; */
   background-color: black;
   background-color: transparent;
   height: 50px;
@@ -56,6 +55,55 @@
   width: 500px;
   height: 50px;
   border-radius: 2px;
-  /* border: 0; */
   background-color: rgb(25, 25, 57);
 }
+.creat-todo::placeholder{
+  color: rgb(116, 112, 112);
+}
+li{
+  list-style-type: none;
+}
+.main-list{
+  margin-top: 10%;
+  background-color: rgb(25, 25, 57);
+  border-radius: 10px;
+}
+.list{
+  background-color: rgb(25, 25, 57);
+  color: white;
+  height: 50px;
+  display: flex;
+  align-items:center;
+  border-bottom: 1px solid black;
+  border-radius: 2px;
+  
+}
+input[placeholder]{
+  color: white;
+}
+.list label{
+  margin: 15px;
+}
+.check{
+  color: red;
+}
+.main-button{
+  background-color: rgb(25, 25, 57);
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+}
+.main-button button{
+  background-color: transparent;
+  color: gray;
+  cursor: pointer;
+}
+.main-button button:hover{
+  color: rgb(16, 16, 221);
+}
+.btn2 button {
+  margin-left: 15px;
+  
+}
+
