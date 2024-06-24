@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": "1719268830501",
+      "content": "todo1",
+      "checked": false
+    },
+    {
+      "id": "1719268833278",
+      "content": "todo2",
+      "checked": true
+    },
+    {
+      "id": "1719268837247",
+      "content": "jss",
+      "checked": true
+    },
+    {
+      "id": "1719269329115",
+      "content": "to",
+      "checked": false
+    }
+  ]
+}
