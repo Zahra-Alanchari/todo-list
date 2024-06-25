@@ -73,6 +73,10 @@
   color: hsl(236, 9%, 61%);
   padding: 50px;
 }
+.creat-todo-light::placeholder {
+  color: hsl(236, 9%, 61%);
+  padding: 50px;
+}
 li {
   list-style-type: none;
 }
@@ -98,7 +102,7 @@ li {
 }
 .list-light {
   background-color: white;
-  color: white;
+  color: gray;
   height: 50px;
   display: flex;
   justify-content: space-between;
