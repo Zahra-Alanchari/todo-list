@@ -32,13 +32,13 @@ const todoReducer = (state = initialState, action) => {
     case DELETE_DONE_TODO_SUCCESS:
       return {
         ...state,
-        todos: state.todos.filter((todo) => !todo.checked ),
+        todos: state.todos.filter((todo) => !todo.checked),
       };
     case DELETE_ITEM_SUCCESS:
-      return{
+      return {
         ...state,
-        todos: state.todos.filter((todo)=>todo.id !== action.payload)
-      }
+        todos: state.todos.filter((todo) => todo.id !== action.payload),
+      };
     default:
       return state;
   }

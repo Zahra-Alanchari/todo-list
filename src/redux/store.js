@@ -4,5 +4,5 @@ import todoReducer from "./reducer";
 import todoSagas from "./sagas";
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(todoReducer, applyMiddleware(sagaMiddleware));
-sagaMiddleware.run(todoSagas)
+sagaMiddleware.run(todoSagas);
 export default store;

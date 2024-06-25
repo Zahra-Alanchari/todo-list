@@ -29,14 +29,12 @@
   color: white;
   position: absolute;
   left: 0;
-  /* transform: translatex(%); */
   letter-spacing: 10px;
   font-size: 2rem;
   font-weight: bold;
   background-color: transparent;
 }
 .main-box {
-  /* background-color: red; */
   width: 500px;
   height: 600px;
   position: absolute;
@@ -98,7 +96,7 @@ li {
   border-bottom: 1px solid black;
   border-radius: 2px;
 }
-.list-light{
+.list-light {
   background-color: white;
   color: white;
   height: 50px;
@@ -121,7 +119,7 @@ li {
 .list label {
   margin: 15px;
 }
-.list-light label{
+.list-light label {
   margin: 15px;
 }
 
@@ -132,14 +130,14 @@ li {
   height: 50px;
   align-items: center;
 }
-.main-button-light{
+.main-button-light {
   background-color: white;
   display: flex;
   justify-content: space-around;
   height: 50px;
   align-items: center;
 }
-.todolist-light{
+.todolist-light {
   box-shadow: 0 0 3px lightgrey;
 }
 .main-button a {
@@ -157,7 +155,7 @@ li {
 .main-list li {
   padding: 20px;
 }
-.main-list-light li{
+.main-list-light li {
   padding: 20px;
 }
 .main-button button {
@@ -165,7 +163,7 @@ li {
   color: hsl(236, 9%, 61%);
   cursor: pointer;
 }
-.main-button-light button{
+.main-button-light button {
   background-color: transparent;
   color: hsl(236, 9%, 61%);
   cursor: pointer;
@@ -193,15 +191,8 @@ li {
   background: none;
 }
 .rounded-checkbox:checked {
-  /* background-image: currentcolor; */
-  /* appearance:auto; */
   color: none;
   background-color: none;
   clip-path: circle(50% at 50% 50%);
-  /* background-color: transparent; */
   background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
-/* .fake-dark-mode {
-  filter: invert(120%);
-  transition: all 0.5s;
-} */

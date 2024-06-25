@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addTodo } from "../redux/action";
 
-export default function NewTodo({lightMode}) {
+export default function NewTodo({ lightMode }) {
   const [newTodo, setNewTodo] = useState("");
   const dispatch = useDispatch();
   function handleSubmit(e) {
@@ -21,7 +21,7 @@ export default function NewTodo({lightMode}) {
   return (
     <form onSubmit={handleSubmit}>
       <input
-        className={`${lightMode? "creat-todo-light": "creat-todo"}`}
+        className={`${lightMode ? "creat-todo-light" : "creat-todo"}`}
         type="text"
         placeholder="Create a new todo..."
         value={newTodo}

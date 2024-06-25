@@ -72,7 +72,7 @@ function* deleteItemSaga(action) {
     yield call(fetch, `http://localhost:3001/todos/${action.payload.id}`, {
       method: "DELETE",
     });
-    yield put({type: DELETE_ITEM_SUCCESS, payload:action.payload.id})
+    yield put({ type: DELETE_ITEM_SUCCESS, payload: action.payload.id });
   } catch (err) {
     console.log(err);
   }
@@ -83,5 +83,5 @@ export default function* todoSagas() {
   yield takeEvery(FETCH_TODO, fetchTodoSaga);
   yield takeEvery(CHECK_TODO, chechTodoSaga);
   yield takeEvery(DELETE_DONE_TODO, deleteTodoSaga);
-  yield takeEvery(DELETE_ITEM,deleteItemSaga)
+  yield takeEvery(DELETE_ITEM, deleteItemSaga);
 }
