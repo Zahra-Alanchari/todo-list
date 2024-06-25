@@ -15,8 +15,7 @@ export default function App() {
       <div className="main-box">
         <Header />
         <NewTodo />
-        <TodoList/>
-        <Button />
+        <TodoList />
       </div>
     </div>
   );

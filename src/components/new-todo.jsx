@@ -7,7 +7,7 @@ export default function NewTodo() {
   const dispatch = useDispatch();
   function handleSubmit(e) {
     e.preventDefault();
-    if (newTodo.trim()) {
+    if (newTodo.trim() !== "") {
       dispatch(
         addTodo({
           id: new Date().getTime().toString(),

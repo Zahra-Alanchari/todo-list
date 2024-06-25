@@ -72,9 +72,11 @@ li{
   color: white;
   height: 50px;
   display: flex;
+  justify-content: space-between;
   align-items:center;
   border-bottom: 1px solid black;
   border-radius: 2px;
+  /* vertical-align: middle; */
   
 }
 input[placeholder]{
@@ -107,5 +109,30 @@ input[placeholder]{
 .btn2 button {
   margin-left: 15px;
   
+}
+.delete{
+  background-color: transparent;
+
+}
+.rounded-checkbox {
+  width:20px;
+  height: 20px;
+  border-radius: 50%;
+  vertical-align: middle;
+  border: 1px solid black;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+  background:none;
+}
+.rounded-checkbox:checked {
+  /* background-image: currentcolor; */
+  appearance:auto;
+  color: none;
+  background-color: none;
+  clip-path: circle(50% at 50% 50%);
+  /* background-color: transparent; */
+  background-image:linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
 }
 
