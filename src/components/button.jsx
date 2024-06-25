@@ -19,9 +19,9 @@ export default function Button({ setFilterStatus }) {
         <button>{remain.length} items left</button>
       </div>
       <div className="btn2">
-        <button onClick={() => handleFilter("all")}>All</button>
-        <button onClick={() => handleFilter(false)}>Active</button>
-        <button onClick={() => handleFilter(true)}>Completed</button>
+        <button className="all" onClick={() => handleFilter("all")}><a href="#">All</a></button>
+        <button className="active" onClick={() => handleFilter(false)}>Active</button>
+        <button className="complete" onClick={() => handleFilter(true)}>Completed</button>
       </div>
       <div>
         <button onClick={handleDelete}>Clear Completed</button>

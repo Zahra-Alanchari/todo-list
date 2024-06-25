@@ -15,7 +15,7 @@
   margin: 0;
   padding: 0;
   position: relative;
-  background-color: black;
+  background-color: hsl(235, 21%, 11%);
 }
 .header {
   color: white;
@@ -54,21 +54,22 @@
   width: 500px;
   height: 50px;
   border-radius: 2px;
-  background-color: rgb(25, 25, 57);
+  background-color: hsl(235, 24%, 19%);
 }
 .creat-todo::placeholder{
-  color: rgb(116, 112, 112);
+  color: hsl(236, 9%, 61%);
+  padding: 50px;
 }
 li{
   list-style-type: none;
 }
 .main-list{
   margin-top: 10%;
-  background-color: rgb(25, 25, 57);
+  background-color: hsl(235, 24%, 19%);
   border-radius: 10px;
 }
 .list{
-  background-color: rgb(25, 25, 57);
+  background-color: hsl(235, 24%, 19%);
   color: white;
   height: 50px;
   display: flex;
@@ -79,32 +80,41 @@ li{
   /* vertical-align: middle; */
   
 }
+.checked{
+  color: hsl(236, 9%, 61%);
+}
 input[placeholder]{
   color: white;
 }
 .list label{
   margin: 15px;
 }
-.check{
-  color: red;
-}
+
 .main-button{
-  background-color: rgb(25, 25, 57);
+  background-color: hsl(235, 24%, 19%);
   display: flex;
   justify-content: space-around;
   height: 50px;
   align-items: center;
+}
+.main-button a{
+  text-decoration: none;
+  color: hsl(236, 9%, 61%);
+}
+.main-button a:active{
+  text-decoration: none;
+  color: red;
 }
 .main-list li{
   padding: 20px;
 }
 .main-button button{
   background-color: transparent;
-  color: gray;
+  color: hsl(236, 9%, 61%);
   cursor: pointer;
 }
 .main-button button:hover{
-  color: rgb(16, 16, 221);
+  color: hsl(220, 98%, 61%);
 }
 .btn2 button {
   margin-left: 15px;
@@ -112,7 +122,7 @@ input[placeholder]{
 }
 .delete{
   background-color: transparent;
-
+  cursor: pointer;
 }
 .rounded-checkbox {
   width:20px;
@@ -128,11 +138,12 @@ input[placeholder]{
 }
 .rounded-checkbox:checked {
   /* background-image: currentcolor; */
-  appearance:auto;
+  /* appearance:auto; */
   color: none;
   background-color: none;
   clip-path: circle(50% at 50% 50%);
   /* background-color: transparent; */
   background-image:linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
 }
+
 
