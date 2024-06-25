@@ -1,19 +1,9 @@
 {
   "todos": [
     {
-      "id": "1719326446872",
-      "content": "hoooora",
-      "checked": true
-    },
-    {
-      "id": "1719338016418",
-      "content": "add1",
-      "checked": false
-    },
-    {
       "id": "1719338019553",
       "content": "addd2",
-      "checked": false
+      "checked": true
     }
   ]
 }

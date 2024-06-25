@@ -4,7 +4,7 @@ import { checkTodo, deleteItem, fetchTodo } from "../redux/action";
 import Button from "./button";
 
 
-export default function TodoList() {
+export default function TodoList({lightMode}) {
   const [filterStatus, setFilterStatus] = useState("all");
   const [filterTodo, setFilterTodo] = useState([]);
   const todos = useSelector((state) => state.todos);
@@ -37,10 +37,10 @@ export default function TodoList() {
   }
   console.log(filterTodo, "filtt");
   return (
-    <div className="todolist">
-      <ul className="main-list">
+    <div className={`${lightMode? "todolist-light": "todolist"}`}>
+      <ul className={`${lightMode? "main-list-light": "main-list"}`}>
         {filterTodo.map((todo) => (
-          <li className="list">
+          <li className={`${lightMode? "list-light": "list"}`}>
             <div>
               <input
                 className="rounded-checkbox"
@@ -53,7 +53,7 @@ export default function TodoList() {
               
               <label
                 for={todo.id}
-                className={`${todo.checked? "checked": ""}`}
+                className={`${todo.checked ? "checked": ""}`}
                 style={{
                   textDecoration: todo.checked ? "line-through" : "none",
                 }}
@@ -70,7 +70,7 @@ export default function TodoList() {
           </li>
         ))}
       </ul>
-      <Button setFilterStatus={setFilterStatus} />
+      <Button lightMode={lightMode} setFilterStatus={setFilterStatus} />
     </div>
   );
 }

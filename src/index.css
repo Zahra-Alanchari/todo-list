@@ -17,6 +17,14 @@
   position: relative;
   background-color: hsl(235, 21%, 11%);
 }
+.main-light {
+  background: url(../images/bg-desktop-light.jpg) no-repeat;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  background-color: white;
+}
 .header {
   color: white;
   position: absolute;
@@ -56,76 +64,124 @@
   border-radius: 2px;
   background-color: hsl(235, 24%, 19%);
 }
-.creat-todo::placeholder{
+.creat-todo-light {
+  margin-top: 20px;
+  width: 500px;
+  height: 50px;
+  border-radius: 2px;
+  background-color: white;
+}
+.creat-todo::placeholder {
   color: hsl(236, 9%, 61%);
   padding: 50px;
 }
-li{
+li {
   list-style-type: none;
 }
-.main-list{
+.main-list {
   margin-top: 10%;
   background-color: hsl(235, 24%, 19%);
   border-radius: 10px;
 }
-.list{
+.main-list-light {
+  margin-top: 10%;
+  background-color: hsl(235, 24%, 19%);
+  border-radius: 10px;
+}
+.list {
   background-color: hsl(235, 24%, 19%);
   color: white;
   height: 50px;
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   border-bottom: 1px solid black;
   border-radius: 2px;
-  /* vertical-align: middle; */
-  
 }
-.checked{
+.list-light{
+  background-color: white;
+  color: white;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
+  border-radius: 2px;
+}
+.checked {
   color: hsl(236, 9%, 61%);
 }
-input[placeholder]{
+
+.creat-todo[placeholder] {
   color: white;
 }
-.list label{
+.creat-todo-light[placeholder] {
+  color: gray;
+}
+.list label {
+  margin: 15px;
+}
+.list-light label{
   margin: 15px;
 }
 
-.main-button{
+.main-button {
   background-color: hsl(235, 24%, 19%);
   display: flex;
   justify-content: space-around;
   height: 50px;
   align-items: center;
 }
-.main-button a{
+.main-button-light{
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  align-items: center;
+}
+.todolist-light{
+  box-shadow: 0 0 3px lightgrey;
+}
+.main-button a {
   text-decoration: none;
   color: hsl(236, 9%, 61%);
 }
-.main-button a:active{
+.main-button-light a {
+  text-decoration: none;
+  color: hsl(236, 9%, 61%);
+}
+.main-button a:active {
   text-decoration: none;
   color: red;
 }
-.main-list li{
+.main-list li {
   padding: 20px;
 }
-.main-button button{
+.main-list-light li{
+  padding: 20px;
+}
+.main-button button {
   background-color: transparent;
   color: hsl(236, 9%, 61%);
   cursor: pointer;
 }
-.main-button button:hover{
+.main-button-light button{
+  background-color: transparent;
+  color: hsl(236, 9%, 61%);
+  cursor: pointer;
+}
+.main-button button:hover {
   color: hsl(220, 98%, 61%);
 }
 .btn2 button {
   margin-left: 15px;
-  
 }
-.delete{
+.delete {
   background-color: transparent;
   cursor: pointer;
 }
 .rounded-checkbox {
-  width:20px;
+  width: 20px;
   height: 20px;
   border-radius: 50%;
   vertical-align: middle;
@@ -134,7 +190,7 @@ input[placeholder]{
   -webkit-appearance: none;
   outline: none;
   cursor: pointer;
-  background:none;
+  background: none;
 }
 .rounded-checkbox:checked {
   /* background-image: currentcolor; */
@@ -143,7 +199,9 @@ input[placeholder]{
   background-color: none;
   clip-path: circle(50% at 50% 50%);
   /* background-color: transparent; */
-  background-image:linear-gradient(hsl(192, 100%, 67%) , hsl(280, 87%, 65%));
+  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
-
-
+/* .fake-dark-mode {
+  filter: invert(120%);
+  transition: all 0.5s;
+} */
