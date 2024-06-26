@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { checkTodo, deleteItem, fetchTodo } from "../redux/action";
 import Button from "./buttons";
+import Close from "../../public/icon/Close";
 
 export default function TodoList({ lightMode }) {
   const [filterStatus, setFilterStatus] = useState("all");
@@ -40,7 +41,7 @@ export default function TodoList({ lightMode }) {
       <ul className={`${lightMode ? "main-list-light" : "main-list"}`}>
         {filterTodo.map((todo) => (
           <li className={`${lightMode ? "list-light" : "list"}`}>
-            <div>
+            <div className="checkBox">
               <input
                 className="rounded-checkbox"
                 type="checkbox"
@@ -48,7 +49,13 @@ export default function TodoList({ lightMode }) {
                 id={todo.id}
                 checked={todo.checked}
               />
-
+              <label
+                for={todo.id}
+                className={`${todo.checked ? "checked" : ""}`}
+                style={{
+                  textDecoration: todo.checked ? "line-through" : "none",
+                }}
+              ></label>
               <label
                 for={todo.id}
                 className={`${todo.checked ? "checked" : ""}`}
@@ -63,18 +70,16 @@ export default function TodoList({ lightMode }) {
               className="delete"
               onClick={() => handleDeleteItem(todo.id)}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-                <path
-                  fill="#494C6B"
-                  fill-rule="evenodd"
-                  d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"
-                />
-              </svg>
+              <Close />
             </button>
           </li>
         ))}
       </ul>
-      <Button lightMode={lightMode} setFilterStatus={setFilterStatus} />
+      <Button
+        filterStatus={filterStatus}
+        lightMode={lightMode}
+        setFilterStatus={setFilterStatus}
+      />
     </div>
   );
 }

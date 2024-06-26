@@ -35,8 +35,9 @@
   background-color: transparent;
 }
 .main-box {
-  width: 500px;
-  height: 600px;
+  width: 50vw;
+  min-width: 375px;
+  height: 60vh;
   position: absolute;
   top: 10%;
   left: 50%;
@@ -57,15 +58,17 @@
 }
 .creat-todo {
   margin-top: 20px;
-  width: 500px;
-  height: 50px;
+  width: 50vw;
+  min-width: 375px;
+  height: 7vh;
   border-radius: 2px;
   background-color: hsl(235, 24%, 19%);
 }
 .creat-todo-light {
   margin-top: 20px;
-  width: 500px;
-  height: 50px;
+  width: 50vw;
+  min-width: 375px;
+  height: 7vh;
   border-radius: 2px;
   background-color: white;
 }
@@ -87,7 +90,7 @@ li {
 }
 .main-list-light {
   margin-top: 10%;
-  background-color: hsl(235, 24%, 19%);
+  background-color: white;
   border-radius: 10px;
 }
 .list {
@@ -162,7 +165,10 @@ li {
 .main-list-light li {
   padding: 20px;
 }
-.main-button button {
+.main-button {
+  background-color: hsl(235, 24%, 19%);
+}
+.main-btn {
   background-color: transparent;
   color: hsl(236, 9%, 61%);
   cursor: pointer;
@@ -178,25 +184,49 @@ li {
 .btn2 button {
   margin-left: 15px;
 }
+.btn2{
+  display: flex;
+}
 .delete {
   background-color: transparent;
   cursor: pointer;
 }
-.rounded-checkbox {
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
   width: 20px;
   height: 20px;
-  border-radius: 50%;
-  vertical-align: middle;
-  border: 1px solid black;
-  appearance: none;
-  -webkit-appearance: none;
-  outline: none;
+  border: 2px solid #ccc;
+  border-radius: 3px;
   cursor: pointer;
-  background: none;
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
 }
-.rounded-checkbox:checked {
-  color: none;
-  background-color: none;
-  clip-path: circle(50% at 50% 50%);
-  background-image: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+input[type="checkbox"]:checked + label {
+  background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  border: none;
+}
+input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.checkBox {
+  display: flex;
+  flex: 1 1 0;
+  align-items: center;
+}
+.filterAll {
+  color: hsl(220, 98%, 61%) !important;
 }

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { deleteTodo } from "../redux/action";
 
-export default function Button({ setFilterStatus, lightMode }) {
+export default function Button({ setFilterStatus, lightMode, filterStatus }) {
   const data = useSelector((state) => state.todos);
   const dispatch = useDispatch();
   const remain = data.filter((todo) => !todo.checked);
@@ -14,23 +14,34 @@ export default function Button({ setFilterStatus, lightMode }) {
     setFilterStatus(status);
   }
   return (
-    <div className={`${lightMode ? "main-button-light" : "main-button"}`}>
+    <div className={` ${lightMode ? "main-button-light" : "main-button"}`}>
       <div>
-        <button>{remain.length} items left</button>
+        <button className="main-btn">{remain.length} items left</button>
       </div>
       <div className="btn2">
-        <button className="all" onClick={() => handleFilter("all")}>
-          <a href="#">All</a>
+        <button
+          className={`main-btn ${filterStatus === "all" && "filterAll"}`}
+          onClick={() => handleFilter("all")}
+        >
+          All
         </button>
-        <button className="active" onClick={() => handleFilter(false)}>
+        <button
+          className={`main-btn ${filterStatus === false && "filterAll"}`}
+          onClick={() => handleFilter(false)}
+        >
           Active
         </button>
-        <button className="complete" onClick={() => handleFilter(true)}>
+        <button
+          className={`main-btn ${filterStatus === true && "filterAll"}`}
+          onClick={() => handleFilter(true)}
+        >
           Completed
         </button>
       </div>
       <div>
-        <button onClick={handleDelete}>Clear Completed</button>
+        <button className="main-btn" onClick={handleDelete}>
+          Clear Completed
+        </button>
       </div>
     </div>
   );
