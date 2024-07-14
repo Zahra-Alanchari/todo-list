@@ -1,7 +1,8 @@
-import Header from "./components/header";
-import NewTodo from "./components/new-todo";
-import TodoList from "./components/todoList";
+import Header from "./components/Header";
+import NewTodo from "./components/NewTodo";
+// import TodoList from "./components/TodoList";
 import { useState } from "react";
+import TodoList from "./components/todoList";
 
 export default function App() {
   const [lightMode, setLightMode] = useState(false);

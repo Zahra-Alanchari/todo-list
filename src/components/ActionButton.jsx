@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { deleteTodo } from "../redux/action";
 
-export default function Button({ setFilterStatus, lightMode, filterStatus }) {
+export default function ActionButton({ setFilterStatus, lightMode, filterStatus }) {
   const data = useSelector((state) => state.todos);
   const dispatch = useDispatch();
   const remain = data.filter((todo) => !todo.checked);

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { checkTodo, deleteItem, fetchTodo } from "../redux/action";
-import Button from "./buttons";
 import Close from "../../public/icon/Close";
+import ActionButton from "./Actionbutton";
 
 export default function TodoList({ lightMode }) {
   const [filterStatus, setFilterStatus] = useState("all");
@@ -40,7 +40,7 @@ export default function TodoList({ lightMode }) {
     <div className={`${lightMode ? "todolist-light" : "todolist"}`}>
       <ul className={`${lightMode ? "main-list-light" : "main-list"}`}>
         {filterTodo.map((todo) => (
-          <li className={`${lightMode ? "list-light" : "list"}`}>
+          <li key={todo.id} className={`${lightMode ? "list-light" : "list"}`}>
             <div className="checkBox">
               <input
                 className="rounded-checkbox"
@@ -75,7 +75,7 @@ export default function TodoList({ lightMode }) {
           </li>
         ))}
       </ul>
-      <Button
+      <ActionButton
         filterStatus={filterStatus}
         lightMode={lightMode}
         setFilterStatus={setFilterStatus}
