@@ -36,7 +36,6 @@ function* fetchTodoSaga() {
   }
 }
 function* chechTodoSaga(action) {
-  // console.log(action, "cccc");
   try {
     const res = yield call(
       fetch,
@@ -48,10 +47,9 @@ function* chechTodoSaga(action) {
       }
     );
     const data = yield res.json();
-    // console.log(data,"dataaa")
     yield put({ type: CHECK_TODO_SUCCESS, payload: data });
   } catch (err) {
-    console.log("ey baba");
+    console.log(err);
   }
 }
 function* deleteTodoSaga() {

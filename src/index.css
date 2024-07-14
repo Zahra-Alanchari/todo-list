@@ -206,14 +206,11 @@ input[type="checkbox"] + label {
   display: inline-block;
   position: relative;
   border-radius: 50%;
-  /* background-color: red; */
 }
 
 input[type="checkbox"]:checked + label {
   background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   border: none;
-  /* background-color: red; */
-  /* z-index: 1; */
 }
 input[type="checkbox"]:checked + label::after {
   content: "";
@@ -225,18 +222,12 @@ input[type="checkbox"]:checked + label::after {
   border: solid white;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
-  /* background-color: red; */
-  /* z-index: 1; */
 }
 .checkBox {
   display: flex;
   flex: 1 1 0;
   align-items: center;
-  /* background-color: red; */
 }
 .filterAll {
   color: hsl(220, 98%, 61%) !important;
-}
-.rounded-checkbox{
-  background-color: red;
 }
