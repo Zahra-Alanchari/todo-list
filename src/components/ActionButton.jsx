@@ -18,7 +18,7 @@ export default function ActionButton({ setFilterStatus, lightMode, filterStatus 
       <div>
         <button className="main-btn">{remain.length} items left</button>
       </div>
-      <div className="btn2">
+      <div className="btn-box">
         <button
           className={`main-btn ${filterStatus === "all" && "filterAll"}`}
           onClick={() => handleFilter("all")}

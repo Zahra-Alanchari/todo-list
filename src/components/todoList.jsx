@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { checkTodo, deleteItem, fetchTodo } from "../redux/action";
 import Close from "../../public/icon/Close";
-import ActionButton from "./Actionbutton";
+import ActionButton from "./ActionButton";
 
 export default function TodoList({ lightMode }) {
   const [filterStatus, setFilterStatus] = useState("all");
@@ -20,6 +20,7 @@ export default function TodoList({ lightMode }) {
     dispatch(fetchTodo());
   }, [dispatch]);
   function handleChange(id, checked) {
+    console.log(checked,"check")
     dispatch(
       checkTodo({
         id,
@@ -35,7 +36,6 @@ export default function TodoList({ lightMode }) {
       })
     );
   }
-  console.log(filterTodo, "filtt");
   return (
     <div className={`${lightMode ? "todolist-light" : "todolist"}`}>
       <ul className={`${lightMode ? "main-list-light" : "main-list"}`}>

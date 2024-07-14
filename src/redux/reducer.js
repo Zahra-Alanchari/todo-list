@@ -8,7 +8,6 @@ import {
 
 const initialState = { todos: [] };
 const todoReducer = (state = initialState, action) => {
-  console.log(action, "action");
   switch (action.type) {
     case ADD_TODO_SUCCESS:
       return {
