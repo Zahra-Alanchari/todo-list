@@ -4,6 +4,11 @@
       "id": "1720966714542",
       "content": "item1",
       "checked": false
+    },
+    {
+      "id": "1726565398544",
+      "content": "item2",
+      "checked": false
     }
   ]
 }
